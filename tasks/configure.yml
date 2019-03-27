@@ -11,7 +11,7 @@
 - name: Deploy helper commands
   template:
     src: 'restic.helper.j2'
-    dest: "{{ restic_install_path }}/restic-{{ item.name }}"
+    dest: "{{ _restic_install_path }}/restic-{{ item.name }}"
     owner: "{{ restic_user }}"
     group: "{{ restic_group }}"
     mode: '0750'
@@ -29,7 +29,7 @@
   when: restic_user != 'root'
 
 - name: Initialize restic repositories
-  command: "{{ restic_install_path }}/restic-{{ item.name }} init"
+  command: "{{ _restic_install_path }}/restic-{{ item.name }} init"
   ignore_errors: true
   no_log: true
   with_items: "{{ restic_repos }}"

@@ -26,7 +26,6 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `restic_user` | "root" | system user to run restic |
 | `restic_group` | "root" | system group to run restic |
 | `restic_shell` | "/bin/false" | the shell for the restic user, change this if you want to be able to su to it |
-| `restic_install_path` | "/usr/local/bin" | directory where restic binary will be installed |
 | `restic_cron_mailto` | restic_user | who to mail results of the restic crons to, set to "" to not mail |
 | `restic_cron_stdout_file` | null | what file to log restic output to, null means include in mailto, use /dev/null to discard |
 | `restic_cron_stderr_file` | null | what file to log restic errors to, null means include in mailto, use /dev/null to discard |

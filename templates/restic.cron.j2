@@ -2,7 +2,7 @@
 {{ ansible_managed | comment }}
 MAILTO="{{ restic_cron_mailto }}"
 SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:{{ restic_install_path }} 
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:{{ _restic_install_path }}
 RESTIC_REPOSITORY={{ item.url | trim | quote }}
 RESTIC_PASSWORD={{ item.password | trim | quote }}
 {% if item.remote_credentials is defined %}

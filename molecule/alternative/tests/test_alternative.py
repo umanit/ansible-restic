@@ -6,7 +6,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_binary(host):
-    binary = host.file("/opt/restic")
+    binary = host.file("/usr/local/bin/restic")
     assert binary.exists
     assert binary.is_file
     assert binary.mode == 0o750

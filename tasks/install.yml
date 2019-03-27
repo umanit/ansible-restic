@@ -11,14 +11,9 @@
     shell: "{{ restic_shell }}"
     system: true
     createhome: true
-    home: "{{ restic_home }}"
+    home: "{{ _restic_home }}"
     state: present
   when: restic_user != 'root'
-
-- name: Ensure restic installation directory exist
-  file:
-    state: 'directory'
-    path: '{{ restic_install_path }}'
 
 - name: Ensure restic user can write to log dirs if defined
   file:
@@ -67,7 +62,7 @@
 - name: Propagate restic binary
   copy:
     src: "/tmp/restic_{{ restic_version }}_{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}"
-    dest: '{{ restic_install_path }}/restic'
+    dest: '{{ _restic_install_path }}/restic'
     mode: '0750'
     owner: 'root'
     group: '{{ restic_group }}'
@@ -81,7 +76,7 @@
 
 - name: Set proper capabilities for restic binary
   capabilities:
-    path: '{{ restic_install_path }}/restic'
+    path: '{{ _restic_install_path }}/restic'
     capability: cap_dac_read_search+ep
     state: present
   when: not ansible_check_mode
