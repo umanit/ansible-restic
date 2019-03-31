@@ -1,6 +1,15 @@
 ---
 - include: preflight.yml
+  tags:
+    - restic_install
+    - restic_configure
 
 - include: install.yml
+  become: true
+  tags:
+    - restic_install
 
 - include: configure.yml
+  become: true
+  tags:
+    - restic_configure

@@ -5,6 +5,9 @@
   roles:
     - ansible-restic
   vars:
+    restic_version: latest
+    restic_user: restic
+    restic_group: restic
     restic_repos:
       - name: local-example
         url: "/tmp/restic"

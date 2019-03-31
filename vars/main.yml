@@ -6,5 +6,6 @@ go_arch_map:
   armv7l: arm
   armv6l: arm
 
+go_arch: "{{ go_arch_map[ansible_architecture] | default(ansible_architecture) }}"
 _restic_home: "/var/lib/restic"
 _restic_install_path: '/usr/local/bin'

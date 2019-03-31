@@ -58,7 +58,6 @@ For example, if you have a restic repository named `testrepo`, you could use the
 Use it in a playbook as follows:
 ```yaml
 - hosts: all
-  become: yes
   roles:
     - paulfantom.restic
 ```
