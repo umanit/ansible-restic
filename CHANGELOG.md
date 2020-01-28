@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Restic 0.9.6 has been out for a while [\#65](https://github.com/paulfantom/ansible-restic/pull/65) ([jkirk](https://github.com/jkirk))
 - Fix restic repo initialization check [\#64](https://github.com/paulfantom/ansible-restic/pull/64) ([madddi](https://github.com/madddi))
 - Changed checksum checking process [\#60](https://github.com/paulfantom/ansible-restic/pull/60) ([rez0n](https://github.com/rez0n))
 
