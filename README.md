@@ -7,10 +7,9 @@
 [![Ansible Role](https://img.shields.io/badge/ansible%20role-paulfantom.restic-blue.svg)](https://galaxy.ansible.com/paulfantom/restic/)
 [![GitHub tag](https://img.shields.io/github/tag/paulfantom/ansible-restic.svg)](https://github.com/paulfantom/ansible-restic/tags)
 
-## IMPORTANT
+## IMPORTANT - Project archived
 
-Maintainers needed!
-I am no longer using this project anywhere and I don't have any drive towards maintaing it anymore. If you are interested in maintaining this project, write me an email on paulfantom@gmail.com.
+Project is archived due to my lack of interest in maintaining it (I am not using it anymore). I will happily unarchive it if anyone is interested in maintaining it. If you are such person, write me an email at paulfantom@gmail.com.
 
 ## Description
 
