@@ -1,6 +1,9 @@
 ---
 restic_version: '0.12.0'
 
+# Must we perform download and propagation from localhost (true) or not (false)
+restic_download_localhost: true
+
 restic_user: root
 restic_group: "{{ restic_user }}"
 restic_shell: "/bin/false"
