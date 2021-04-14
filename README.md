@@ -2,14 +2,16 @@
 
 # Ansible Role: restic
 
-[![Build Status](https://travis-ci.org/paulfantom/ansible-restic.svg?branch=master)](https://travis-ci.org/paulfantom/ansible-restic)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Ansible Role](https://img.shields.io/badge/ansible%20role-paulfantom.restic-blue.svg)](https://galaxy.ansible.com/paulfantom/restic/)
-[![GitHub tag](https://img.shields.io/github/tag/paulfantom/ansible-restic.svg)](https://github.com/paulfantom/ansible-restic/tags)
+[![GitHub tag](https://img.shields.io/github/tag/paulfantom/ansible-restic.svg)](https://github.com/umanit/ansible-restic/tags)
 
-## IMPORTANT - Project archived
+## IMPORTANT - Fork
 
-Project is archived due to my lack of interest in maintaining it (I am not using it anymore). I will happily unarchive it if anyone is interested in maintaining it. If you are such person, write me an email at paulfantom@gmail.com.
+Upstream project ([paulfantom/ansible-restic](https://github.com/paulfantom/ansible-restic)) is archived.
+This fork is maintained by UmanIT company for our usage, feel free to contribute if needed.
+
+Changes made from upstream version:
+* Add option to download and propagate restic binary from remote host instead localhost 
 
 ## Description
 
@@ -26,7 +28,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
-| `restic_version` | 0.9.6 | restic package version. Also accepts latest as parameter. |
+| `restic_version` | 0.12.0 | restic package version. Also accepts latest as parameter. |
 | `restic_user` | "root" | system user to run restic |
 | `restic_group` | "root" | system group to run restic |
 | `restic_shell` | "/bin/false" | the shell for the restic user, change this if you want to be able to su to it |
@@ -36,6 +38,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `restic_cron_stderr_file` | null | what file to log restic errors to, null means include in mailto, use /dev/null to discard |
 | `restic_sudo_command_whitelist` | [] | whitelist of commands restic is allowed to run with sudo |
 | `restic_repos` | [] | restic repositories and cron jobs configuration. More in [defaults/main.yml](defaults/main.yml) |
+| `restic_download_localhost` | true | If true restic release is download and decompressed on localhost then binary is propagated (uploaded) to server (remote), if false everything is done on remote host |
 
 ## Security
 
