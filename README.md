@@ -39,6 +39,11 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `restic_sudo_command_whitelist` | [] | whitelist of commands restic is allowed to run with sudo |
 | `restic_repos` | [] | restic repositories and cron jobs configuration. More in [defaults/main.yml](defaults/main.yml) |
 | `restic_download_localhost` | true | If true restic release is download and decompressed on localhost then binary is propagated (uploaded) to server (remote), if false everything is done on remote host |
+| `restic_cron_use_logger` | false | If true, all message log will be sent to syslog using logger |
+| `restic_cron_logger_capture_stderr` | false | If true, messages sent to stderr will also be sent to syslog using logger. No email will be sent in case of a failure/error. |
+| `restic_logger_tag_prune` | "restic-prune" | Logger's tag name for prune tasks|
+| `restic_logger_tag_backup` | "restic-backup" | Logger's tag name for backup tasks |
+| `restic_logger_tag_check_repo` | "restic-check-repo" | Loggers tag name when checking the repository|
 
 ## Security
 
