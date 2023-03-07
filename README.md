@@ -11,7 +11,7 @@ Upstream project ([paulfantom/ansible-restic](https://github.com/paulfantom/ansi
 This fork is maintained by UmanIT company for our usage, feel free to contribute if needed.
 
 Changes made from upstream version:
-* Add option to download and propagate restic binary from remote host instead localhost 
+* Add option to download and propagate restic binary from remote host instead localhost
 
 ## Description
 
@@ -67,7 +67,7 @@ Use it in a playbook as follows:
 ```yaml
 - hosts: all
   roles:
-    - paulfantom.restic
+    - umanit.restic
 ```
 
 ## Local Testing
