@@ -17,6 +17,12 @@ restic_cron_mailto: "{{ restic_user }}"
 restic_cron_stdout_file: null
 restic_cron_stderr_file: null
 
+restic_cron_use_logger: false
+restic_cron_logger_capture_stderr: false
+restic_logger_tag_prune: "restic-prune"
+restic_logger_tag_backup: "restic-backup"
+restic_logger_tag_check_repo: "restic-check-repo"
+
 restic_sudo_command_whitelist: []
 # restic_sudo_command_whitelist:
 #   - command: /usr/bin/some_backup_related_command_that_needs_sudo
