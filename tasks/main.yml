@@ -1,10 +1,10 @@
 ---
-- include: preflight.yml
+- include_tasks: preflight.yml
   tags:
     - restic_install
     - restic_configure
 
-- include: install.yml
+- include_tasks: install.yml
   become: true
   tags:
     - restic_install
@@ -21,7 +21,7 @@
   tags:
     - restic_configure
 
-- include: configure_repos.yml
+- include_tasks: configure_repos.yml
   with_items: '{{ restic_repos }}'
   become: true
   tags:
