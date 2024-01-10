@@ -25,3 +25,4 @@
   with_items: '{{ restic_repos }}'
   tags:
     - restic_configure
+  when: restic_repos is defined and restic_repos is iterable
